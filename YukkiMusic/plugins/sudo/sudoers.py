@@ -7,6 +7,7 @@
 #
 # All rights reserved.
 
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -24,7 +25,7 @@ SUDOUSERS_COMMAND = get_command("SUDOUSERS_COMMAND")
 
 
 @app.on_message(
-    filters.command(ADDSUDO_COMMAND) & filters.user(OWNER_ID)
+    command(ADDSUDO_COMMAND) & filters.user(OWNER_ID)
 )
 @language
 async def useradd(client, message: Message, _):
@@ -70,7 +71,7 @@ async def useradd(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(DELSUDO_COMMAND) & filters.user(OWNER_ID)
+    command(DELSUDO_COMMAND) & filters.user(OWNER_ID)
 )
 @language
 async def userdel(client, message: Message, _):
@@ -105,7 +106,7 @@ async def userdel(client, message: Message, _):
     await message.reply_text(f"Something wrong happened.")
 
 
-@app.on_message(filters.command(SUDOUSERS_COMMAND) & ~BANNED_USERS)
+@app.on_message(command(SUDOUSERS_COMMAND) & ~BANNED_USERS)
 @language
 async def sudoers_list(client, message: Message, _):
     text = _["sudo_5"]
