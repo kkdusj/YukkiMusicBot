@@ -7,6 +7,7 @@
 #
 # All rights reserved.
 
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
@@ -28,7 +29,7 @@ SKIP_COMMAND = get_command("SKIP_COMMAND")
 
 
 @app.on_message(
-    filters.command(SKIP_COMMAND)
+    command(SKIP_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS

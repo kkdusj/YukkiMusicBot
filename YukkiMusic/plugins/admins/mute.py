@@ -7,6 +7,7 @@
 #
 # All rights reserved.
 
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -22,7 +23,7 @@ MUTE_COMMAND = get_command("MUTE_COMMAND")
 
 
 @app.on_message(
-    filters.command(MUTE_COMMAND)
+    command(MUTE_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS

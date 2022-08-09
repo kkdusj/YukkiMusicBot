@@ -7,6 +7,7 @@
 #
 # All rights reserved.
 
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -22,7 +23,7 @@ RESUME_COMMAND = get_command("RESUME_COMMAND")
 
 
 @app.on_message(
-    filters.command(RESUME_COMMAND)
+    command(RESUME_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS

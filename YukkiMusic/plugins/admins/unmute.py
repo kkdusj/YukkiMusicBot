@@ -7,6 +7,7 @@
 #
 # All rights reserved.
 
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -22,7 +23,7 @@ UNMUTE_COMMAND = get_command("UNMUTE_COMMAND")
 
 
 @app.on_message(
-    filters.command(UNMUTE_COMMAND)
+    command(UNMUTE_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
