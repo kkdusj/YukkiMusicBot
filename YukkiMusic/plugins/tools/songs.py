@@ -12,6 +12,7 @@ import re
 
 import yt_dlp
 from pykeyboard import InlineKeyboard
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaAudio,
@@ -30,32 +31,7 @@ SONG_COMMAND = get_command("SONG_COMMAND")
 
 
 @app.on_message(
-    filters.command(SONG_COMMAND)
-    & filters.group
-    & ~filters.edited
-    & ~BANNED_USERS
-)
-@language
-async def song_commad_group(client, message: Message, _):
-    upl = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    text=_["SG_B_1"],
-                    url=f"https://t.me/{app.username}?start=song",
-                ),
-            ]
-        ]
-    )
-    await message.reply_text(_["song_1"], reply_markup=upl)
-
-
-# Song Module
-
-
-@app.on_message(
-    filters.command(SONG_COMMAND)
-    & filters.private
+    command(SONG_COMMAND)
     & ~filters.edited
     & ~BANNED_USERS
 )

@@ -8,6 +8,7 @@
 # All rights reserved.
 import asyncio
 
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import CallbackQuery, Message
 
@@ -27,7 +28,7 @@ RESTART_COMMAND = get_command("RESTART_COMMAND")
 
 
 @app.on_message(
-    filters.command(RELOAD_COMMAND)
+    command(RELOAD_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
@@ -55,7 +56,7 @@ async def reload_admin_cache(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(RESTART_COMMAND)
+    command(RESTART_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS

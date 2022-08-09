@@ -13,6 +13,7 @@ from sys import version as pyver
 
 import psutil
 from pyrogram import __version__ as pyrover
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.errors import MessageIdInvalid
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
@@ -46,7 +47,7 @@ STATS_COMMAND = get_command("STATS_COMMAND")
 
 
 @app.on_message(
-    filters.command(STATS_COMMAND)
+    command(STATS_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
@@ -64,7 +65,7 @@ async def stats_global(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(GSTATS_COMMAND)
+    command(GSTATS_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS

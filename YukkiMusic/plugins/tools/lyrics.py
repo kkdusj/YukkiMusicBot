@@ -12,6 +12,7 @@ import re
 import string
 
 import lyricsgenius as lg
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
@@ -35,7 +36,7 @@ y.verbose = False
 
 
 @app.on_message(
-    filters.command(LYRICS_COMMAND) & ~filters.edited & ~BANNED_USERS
+    command(LYRICS_COMMAND) & ~filters.edited & ~BANNED_USERS
 )
 @language
 async def lrsearch(client, message: Message, _):
