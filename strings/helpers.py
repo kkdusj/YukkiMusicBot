@@ -7,76 +7,53 @@
 #
 # All rights reserved.
 
-HELP_1 = """✅**<u>Admin Commands:</u>**
+HELP_1 = """✅**<u>اوامر الادمن:</u>**
 
-**c** stands for channel play.
-
-/pause or /cpause - Pause the playing music.
-/resume or /cresume- Resume the paused music.
-/mute or /cmute- Mute the playing music.
-/unmute or /cunmute- Unmute the muted music.
-/skip or /cskip- Skip the current playing music.
-/stop or /cstop- Stop the playing music.
-/shuffle or /cshuffle- Randomly shuffles the queued playlist.
-/seek or /cseek - Forward Seek the music to your duration
-/seekback or /cseekback - Backward Seek the music to your duration
-/restart - Restart bot for your chat .
-
-
-✅<u>**Specific Skip:**</u>
-/skip or /cskip [Number(example: 3)] 
-    - Skips music to a the specified queued number. Example: /skip 3 will skip music to third queued music and will ignore 1 and 2 music in queue.
-
-✅<u>**Loop Play:**</u>
-/loop or /cloop [enable/disable] or [Numbers between 1-10] 
-    - When activated, bot loops the current playing music to 1-10 times on voice chat. Default to 10 times.
-
-✅<u>**Auth Users:**</u>
-Auth Users can use admin commands without admin rights in your chat.
-
-/auth [Username] - Add a user to AUTH LIST of the group.
-/unauth [Username] - Remove a user from AUTH LIST of the group.
-/authusers - Check AUTH LIST of the group."""
+**c** رمز التحكم في القنوات
+يمكنك كتابه الامر بدون شرط
+🐲━─⊶⛧•𝙆𝙄ٍَ𝙉ٍ𝙂•⛧⊷─━🐲
+◍ /pause or /cpause - **وقف** √ للوقف مؤقتا√.
+◍ /resume or /cresume- **كمل** √ لاستئناف التشغيل√.
+◍ /mute or /cmute- **اسكت** √ لكتم البوت√.
+◍ /unmute or /cunmute- **اتكلم** √ لألغاء الكتم.
+◍ /skip or /cskip- **تخطي** √ لتقدم للمسار التالي√.
+◍ /stop or /cstop- **ايقاف** √ لانهاء التشغيل√.
+◍ /shuffle or /cshuffle- عشوئى √ لتشغيل قوئم الانتظار عشوئى√.
+◍ /seek or /cseek - العوده لقايمه التشغيل√
+◍ /seekback or /cseekback - العوده للمشغل
+◍ /restart - تحديث √ لتحديث قايمه الادمنيه√ .
+🐲━─⊶⛧•𝙆𝙄ٍَ𝙉ٍ𝙂•⛧⊷─━🐲."""
 
 
-HELP_2 = """✅<u>**Play Commands:**</u>
+HELP_2 = """✅<u>**اوامرالتشغيل:**</u>
 
-Available Commands = play , vplay , cplay
-
-ForcePlay Commands = playforce , vplayforce , cplayforce
-
-**c** stands for channel play.
-**v** stands for video play.
-**force** stands for force play.
-
-/play or /vplay or /cplay  - Bot will start playing your given query on voice chat or Stream live links on voice chats.
-
-/playforce or /vplayforce or /cplayforce -  **Force Play** stops the current playing track on voice chat and starts playing the searched track instantly without disturbing/clearing queue.
-
-/channelplay [Chat username or id] or [Disable] - Connect channel to a group and stream music on channel's voice chat from your group.
-
-
-✅**<u>Bot's Server Playlists:</u>**
-/playlist  - Check Your Saved Playlist On Servers.
-/deleteplaylist - Delete any saved music in your playlist
-/play  - Start playing Your Saved Playlist from Servers."""
+🖥اوامر تشغيل البوت في الجروبات والقنوات\nالامر يكتب كما هو لا تستخدم شرط او رموز قبله
+🐲━─⊶⛧•𝙆𝙄ٍَ𝙉ٍ𝙂•⛧⊷─━🐲
+◍ اوامر تشغيل البوت في المجموعات √
+◍ ✪『**تشغيل**』✪➢➕\n「اسم الأغنية او رابط تشغيل」
+◍ ✪『**vplay**』✪➢➕\n「اسم الفديو او / رابط الفيديو」 تشغيل الفيديو داخل المكالمة  
+◍ ✪『**تحميل**』✪➢➕\n«اسم الاغنيه»لتحميل اغنيه من اليوتيوب
+◍ ✪『تحديث』✪➢لتحديث قائمه الادمنيه
+🐲━─⊶⛧•𝙆𝙄ٍَ𝙉ٍ𝙂•⛧⊷─━🐲
+جزء القنوات اضف البوت \nفي جروبك وقناتك مشرف
+ثم تكتب في جروبك 
+**ربط** + يوزر القناه او الايدي \nثم ثكتب الاوامر الاتيه في الجروب 
+◍ ✪『**cplay**』✪➢ +\n اسم الاغنيه لتشغيل اغاني في قناتك 
+◍ ✪『**cvplay**』✪➢ +\nاسم الاغنيه لتشغيل فديو في قناتك
+🐲━─⊶⛧•𝙆𝙄ٍَ𝙉ٍ𝙂•⛧⊷─━🐲."""
 
 
-HELP_3 = """✅<u>**Bot Commands:**</u>
-
-/stats - Get Top 10 Tracks Global Stats, Top 10 Users of bot, Top 10 Chats on bot, Top 10 Played in a chat etc etc.
-
-/sudolist - Check Sudo Users of Yukki Music Bot
-
-/lyrics [Music Name] - Searches Lyrics for the particular Music on web.
-
-/song [Track Name] or [YT Link] - Download any track from youtube in mp3 or mp4 formats.
-
-/player -  Get a interactive Playing Panel.
-
-**c** stands for channel play.
-
-/queue or /cqueue- Check Queue List of Music."""
+HELP_3 = """✅<u>**اوامر البوت:**</u>
+يمكن استخدام الاوامر بدون شرط
+🐲━─⊶⛧•𝙆𝙄ٍَ𝙉ٍ𝙂•⛧⊷─━🐲
+◍ /stats - **احصا** √ لعرض الاحصائيات.
+◍ /sudolist - **الادمنيه** √ لعرض الادمنيه البوت
+◍ /lyrics [Music Name] - **كلمات** √ لعرض كلمات اغنيه√.
+/song [Track Name] or رابط -**تحميل** لتحميل من اليوتيوب.
+◍ /player - **النشغل** √ لعرض قايمه التشغيل√.
+◍ **c** هذا الرمز للقنوات فقط √. 
+◍ /queue or /cqueue- لعرض قايمه التشغيل√
+🐲━─⊶⛧•𝙆𝙄ٍَ𝙉ٍ𝙂•⛧⊷─━🐲"""
 
 HELP_4 = """✅<u>**Extra  Commands:**</u>
 /start - Start the Music Bot.
